@@ -2,3 +2,11 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe>
 <p><%= video.description%></p>
 <p>FAIL LEVEL<%= video.failevel%></p>
+<p class="nsfw">nsfw>: <%= video.nsfw%></p>
+
+<a href="/<%= video.id %>/edit">edit</a>
+
+<form class="delete" action="/<%= video.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
