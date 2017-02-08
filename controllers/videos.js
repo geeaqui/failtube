@@ -1,3 +1,5 @@
+var videos = require('../models/video');
+
 function indexVideos(req, res){
 	res.render('videos/index');
 }
