@@ -1,11 +1,11 @@
 var videos = require('../models/video');
 
 function indexVideos(req, res){
-	res.render('videos/index');
+	res.render('videos/index', { videos : videos });
 }
 
 function showVideos(req, res){
-	res.render('videos/show');
+	res.render('videos/show',{video: videos[req.params.id]});
 }
 
 function editVideos(req, res){
@@ -13,7 +13,16 @@ function editVideos(req, res){
 }
 
 function newVideos(req, res){
-	res.render('videos/new');
+	var newVideo =  {
+    id: "",
+    title: "",
+    description: "",
+    url: "",
+    failLevel: "",
+    nsfw: ""
+  }
+
+	res.render("videos/new", { video: newVideo });
 }
 
 function updateVideos(req,res){
@@ -29,11 +38,11 @@ function deleteVideos(req, res){
 }
 
 module.exports = {
-	index:indexVideos,
- 	show: showVideos,
- 	edit: editVideos,
+	index: indexVideos,
+	show: showVideos,
 	new: newVideos,
-	delete: deleteVideos,
+	create: createVideos,
+	edit: editVideos,
 	update: updateVideos,
-	create: createVideos
+	delete: deleteVideos
 }

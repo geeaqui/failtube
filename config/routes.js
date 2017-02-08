@@ -2,9 +2,6 @@ var express = require('express');
 var router = express.Router();
 var videosController = require('../controllers/videos');
 
-router.get('/', function(req,res){
-	res.render('videos/index');
-});
 
 router.route('/')
   .get(videosController.index)

@@ -1,1 +1,11 @@
-<h1>Index</h1>
+<h1>all videos</h1>
+
+<% for (var i = 0; i < videos.length; i++) { %>
+  <div class="video">
+    <a href="/<%= videos[i].id %>">
+      <h3><%= videos[i].title %></h3>
+      <p class="failLevel">fail level: <%= videos[i].failLevel %></p>
+      <p class="nsfw">nsfw?: <%= videos[i].nsfw %></p>
+    </a>
+  </div>
+<% } %>
