@@ -3,7 +3,7 @@ var router = express.Router();
 var videosController = require('../controllers/videos');
 
 router.get('/', function(req,res){
-	res.send('index working');
+	res.render('videos/index');
 });
 
 router.route('/')

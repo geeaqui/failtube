@@ -1,17 +1,17 @@
 function indexVideos(req, res){
-	res.send('index');
+	res.render('videos/index');
 }
 
 function showVideos(req, res){
-	res.send('show');
+	res.render('videos/show');
 }
 
 function editVideos(req, res){
-	res.send('edit');
+	res.render('videos/edit');
 }
 
 function newVideos(req, res){
-	res.send('new');
+	res.render('videos/new');
 }
 
 function updateVideos(req,res){
