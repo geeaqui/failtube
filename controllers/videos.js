@@ -26,7 +26,10 @@ function newVideos(req, res){
 }
 
 function updateVideos(req,res){
-	res.send('update');
+	var video = req.body;
+	video.id = req.params.id;
+	videos[req.params.id] = video;
+	res.redirect('/');
 }
 
 function createVideos(req, res){
