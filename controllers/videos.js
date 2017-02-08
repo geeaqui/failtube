@@ -9,7 +9,7 @@ function showVideos(req, res){
 }
 
 function editVideos(req, res){
-	res.render('videos/edit');
+	res.render('videos/edit', {video:videos[req.params.id]});
 }
 
 function newVideos(req, res){
@@ -30,7 +30,10 @@ function updateVideos(req,res){
 }
 
 function createVideos(req, res){
-	res.send('create');
+	var video= req.body;
+	video.id = videos.length;
+	videos.push = video;
+	res.redirect('/');
 }
 
 function deleteVideos(req, res){
