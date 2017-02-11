@@ -8,6 +8,7 @@ var methodOverride = require('method-override');
 var port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:false}));
 
 app.use(methodOverride(function(req, res){
@@ -25,3 +26,5 @@ app.use(router);
 app.listen(port, function(){
 	console.log('Failtube is live and listening on port ' + port);
 });
+
+module.exports = app;

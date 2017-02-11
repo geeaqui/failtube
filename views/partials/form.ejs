@@ -1,4 +1,4 @@
-<form action="/<%= video.id %>" method="post">
+<form id="vidForm" action="/<%= video.id %>" method="post">
   <% if (video.id !== "") { %>
     <input type="hidden" name="_method" value="put">
   <% } %>
@@ -7,7 +7,7 @@
   <input type="text" name="title" placeholder="Title" value="<%= video.title %>">
 
   <label for="description"></label>
-  <textarea name="description" rows="8" cols="80"><%= video.description %></textarea>
+  <textarea name="description" rows="8" cols="80" placeholder="write description of video"><%= video.description %></textarea>
 
   <label for="url"></label>
   <input type="text" name="url" placeholder="Url code" value="<%= video.url %>">
@@ -18,5 +18,5 @@
   <label for="nsfw"></label>
   <input type="checkbox" name="nsfw" value="<%= video.nsfw %>">
 
-  <input type="submit" value="go!">
+  <input id="submitBtn" type="submit" value="go!">
 </form>

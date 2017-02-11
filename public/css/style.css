@@ -1,0 +1,165 @@
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#siteName{
+	font-size:36px;
+	padding:10px;
+	font-weight: bold;
+}
+
+#siteName span{
+	background-color: red;
+	padding:5px;
+	color:#fff;
+	border-radius: 10px;
+}
+
+/********* NAVIGATION **********/
+#myNav{
+	background-color: #292c54;
+	height:50px;
+}
+
+#myNav a{
+	font-size:14px;
+	text-decoration:none;
+	color:white;
+	font-weight:bold;
+	padding:10px;
+	//background-color: #2534fc;
+	background: red;
+	border-radius: 5px;
+	position: relative;
+	top:22px;
+	left:50px;
+	text-transform: uppercase;
+}
+
+#myNav a:hover{
+	//background-color: #2b2e54;
+	background-color: #2534fc;
+	border-top: 5px solid #fff;
+}
+
+
+/*********** INDEX *************/
+
+.intHeader{
+	text-transform: uppercase;
+	text-align: center;
+	padding-top:50px;
+	font-size:36px;
+	color:#292c54;
+	letter-spacing: 5px;
+	font-weight: bold;
+
+}
+
+#videoWrapper{
+	text-align: center;
+}
+
+.video{
+	width: 250px;
+	height:150px;
+	border:1px solid #000;
+	display: inline-block;
+	text-align: center;
+}
+
+.video h3{
+	font-weight: bold;
+	background-color: #292c54;
+	background-color: red;
+	color:#fff;
+	padding:10px;
+	letter-spacing: 5px;
+}
+
+.video a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size:18px;
+}
+
+.video p{
+	padding:10px;
+	font-weight: bold;
+	color: #000;
+}
+
+/*********** SHOW *************/
+.failVideos{
+	margin-left:30%;
+}
+
+#showDetails{
+	width:500px;
+	height:150px;
+	margin-left: auto;
+	margin-right:auto;
+	border:1px solid #000;
+}
+
+#showDetails h1{
+	font-size:24px;
+	font-weight:bold;
+	background-color: #292c54;
+	color:#fff;
+	text-align: center;
+}
+
+#showDetails p{
+	text-align: center;
+	padding:3px;
+}
+
+.editBtn{
+	text-decoration: none;
+	padding:5px 0;
+	display:inline-block;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.btn{
+	width:200px;
+	font-size:18px;
+	background-color: red;
+	color:#fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	border:none;
+	margin-left: 30%;
+}
+
+.btn:hover{
+	background-color: #2534fc;
+}
+
+
+/************ FORMS ****************/
+#vidForm{
+	text-align: center;
+}
+#vidForm input{
+	margin-left: auto;
+	margin-right: auto;
+	width:300px;
+	height:50px;
+	margin-bottom: 10px;
+
+}
+#vidForm, #vidForm input{
+	display: block;
+}
+
+#submitBtn{
+	padding:10px;
+	background-color: red;
+	color:#fff;
+	font-size:24px;
+	border:none;
+	font-weight: bold;
+}
