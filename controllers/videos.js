@@ -22,21 +22,38 @@ function newVideos(req, res){
     nsfw: ""
   }
 
-	res.status(200).render("videos/new", { video: newVideo });
+	res.render("videos/new", {
+		video: newVideo 
+	});
 }
 
 function updateVideos(req,res){
-	var video = req.body;
-	video.id = req.params.id;
+	var video = videos[req.params.id];
+
+	video.title = req.body.title;
+	video.description = req.body.description;
+	video.url = req.body.url;
+	video.failLevel = req.body.failLevel;
+	video.nsfw = req.body.nsfw;
+
 	videos[req.params.id] = video;
-	res.status(200).redirect('/');
+
+	res.redirect('/');
 }
 
 function createVideos(req, res){
-	var video= req.body;
-	video.id = videos.length;
-	videos.push = video;
-	res.status(200).redirect('/');
+	var video = {
+		id: videos.length,
+		title: req.body.title,
+		description: req.body.description,
+		url: req.body.url,
+		failLevel: req.body.failLevel,
+		nsfw: req.body.nsfw
+	}
+
+	videos.push(video);
+
+	res.redirect('/');
 }
 
 function deleteVideos(req, res){
