@@ -89,19 +89,26 @@ function createVideos(req, res){
   
   var video = new Videos(req.body);
   video.save(function(err, post){
+
     //handle the error
     if(err) return re.status(500).send(err.message);
     // redirect the user to a GET route. We'll go back to the INDEX.
     res.redirect("/");
+    
   });
 }
 
 function deleteVideos(req, res){
-	Videos.splice(req.params.id, 1);
-	for(var i=0; i<Videos.length; i ++){
-		Videos[i].id = i;
-	}
-	res.status(200).redirect('/');
+	// Videos.pull(req.params.id, 1);
+	// for(var i=0; i<Videos.length; i ++){
+	// 	Videos[i].id = i;
+	// }
+	// res.status(200).redirect('/');
+
+	Videos.findByIdAndRemove(req.params.id, function(err, post){
+    // redirect the user to a GET route. We'll go back to the INDEX.
+    res.redirect("/");
+  });
 }
 
 module.exports = {
