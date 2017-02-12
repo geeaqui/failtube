@@ -44,7 +44,8 @@ function newVideos(req, res){
     description: "",
     url: "",
     failLevel: "",
-    nsfw: ""
+    nsfw: "",
+    thumbnail:""
   }
 
 	res.render("videos/new", {
@@ -94,7 +95,7 @@ function createVideos(req, res){
     if(err) return re.status(500).send(err.message);
     // redirect the user to a GET route. We'll go back to the INDEX.
     res.redirect("/");
-    
+
   });
 }
 

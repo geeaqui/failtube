@@ -62,7 +62,7 @@ body{
 
 .video{
 	width: 250px;
-	height:150px;
+	height:250px;
 	border:1px solid #000;
 	display: inline-block;
 	text-align: center;
@@ -87,6 +87,11 @@ body{
 	padding:10px;
 	font-weight: bold;
 	color: #000;
+}
+
+.thumbnail{
+	width:200px;
+	height:100px;
 }
 
 /*********** SHOW *************/

@@ -40,7 +40,8 @@ var VideoSchema = mongoose.Schema({
   description: String,
   url: String,
   failLevel:Number,
-  nsfw:Boolean
+  nsfw:Boolean,
+  thumbnail: String
 });
 
 
